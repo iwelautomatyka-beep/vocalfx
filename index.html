@@ -1,374 +1,432 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>VocalFX – Privacy Policy</title>
-    <style>
-        * { box-sizing: border-box; margin: 0; padding: 0; }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Privacy Policy | VocalFX</title>
+  <style>
+    :root {
+      --bg: #0a0f1d;
+      --panel: #131a2e;
+      --text: #eef4ff;
+      --muted: #bfd0ef;
+      --accent: #6e5cff;
+      --accent-2: #ff6e87;
+      --border: rgba(255,255,255,0.1);
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: "Segoe UI", Arial, sans-serif;
+      background:
+        radial-gradient(circle at top right, rgba(110,92,255,0.20), transparent 32%),
+        radial-gradient(circle at bottom left, rgba(255,110,135,0.14), transparent 28%),
+        var(--bg);
+      color: var(--text);
+      line-height: 1.65;
+    }
+    .wrap { max-width: 980px; margin: 0 auto; padding: 40px 20px 56px; }
+    .hero, .section {
+      background: rgba(19,26,46,0.94);
+      border: 1px solid var(--border);
+      border-radius: 28px;
+      padding: 28px 28px 24px;
+      box-shadow: 0 20px 48px rgba(0,0,0,0.28);
+    }
+    .section { margin-top: 18px; border-radius: 24px; padding: 24px; }
+    .eyebrow {
+      color: var(--accent);
+      font-size: 14px;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      margin-bottom: 8px;
+    }
+    h1 { margin: 0 0 10px; font-size: clamp(32px, 5vw, 48px); line-height: 1.08; }
+    h2 { margin: 0 0 12px; font-size: 24px; }
+    h3 { margin: 20px 0 8px; font-size: 19px; color: #ffffff; }
+    p { margin: 0 0 12px; color: var(--muted); }
+    ul { margin: 0 0 8px; padding-left: 22px; color: var(--muted); }
+    li { margin: 0 0 6px; }
+    strong { color: var(--text); }
+    .subtitle { margin: 0; color: var(--muted); font-size: 17px; max-width: 760px; }
+    .meta {
+      display: inline-block;
+      padding: 8px 14px;
+      border-radius: 999px;
+      font-weight: 600;
+      font-size: 13px;
+      margin-top: 16px;
+      background: rgba(255,181,63,0.16);
+      color: #ffe0a4;
+    }
+    .footer { margin-top: 28px; color: var(--muted); font-size: 13px; text-align: center; }
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    code {
+      background: rgba(255,255,255,0.07);
+      padding: 1px 6px;
+      border-radius: 4px;
+      font-size: 0.9em;
+    }
 
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-            background: #07080f;
-            color: #c8d8f0;
-            min-height: 100vh;
-            padding: 40px 20px 80px;
-        }
-
-        .container {
-            max-width: 760px;
-            margin: 0 auto;
-        }
-
-        /* Header */
-        .header {
-            text-align: center;
-            padding: 48px 0 40px;
-            border-bottom: 1px solid #1a2440;
-            margin-bottom: 48px;
-        }
-
-        .app-icon {
-            font-size: 56px;
-            display: block;
-            margin-bottom: 16px;
-        }
-
-        .app-name {
-            font-size: 36px;
-            font-weight: 800;
-            color: #f0f6ff;
-            letter-spacing: -0.5px;
-        }
-
-        .page-title {
-            font-size: 16px;
-            color: #4a6a8a;
-            margin-top: 6px;
-            font-weight: 400;
-        }
-
-        .updated {
-            display: inline-block;
-            margin-top: 16px;
-            background: #0f1a2e;
-            border: 1px solid #1a2e4a;
-            border-radius: 20px;
-            padding: 4px 14px;
-            font-size: 13px;
-            color: #4a7aaa;
-        }
-
-        /* Sections */
-        .section {
-            background: #0e1420;
-            border: 1px solid #162030;
-            border-radius: 18px;
-            padding: 28px 32px;
-            margin-bottom: 20px;
-        }
-
-        .section h2 {
-            font-size: 17px;
-            font-weight: 700;
-            color: #e0eeff;
-            margin-bottom: 14px;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
-
-        .section h2 .icon {
-            font-size: 20px;
-        }
-
-        .section p {
-            font-size: 15px;
-            line-height: 1.75;
-            color: #7a9ab8;
-            margin-bottom: 10px;
-        }
-
-        .section p:last-child { margin-bottom: 0; }
-
-        ul {
-            list-style: none;
-            margin-top: 8px;
-        }
-
-        ul li {
-            font-size: 15px;
-            line-height: 1.7;
-            color: #7a9ab8;
-            padding: 6px 0 6px 24px;
-            position: relative;
-            border-bottom: 1px solid #111c2c;
-        }
-
-        ul li:last-child { border-bottom: none; }
-
-        ul li::before {
-            content: "›";
-            position: absolute;
-            left: 6px;
-            color: #3a5aaa;
-            font-weight: 700;
-        }
-
-        /* Highlight box */
-        .highlight {
-            background: #06100a;
-            border: 1px solid #0d2a18;
-            border-left: 3px solid #00c060;
-            border-radius: 12px;
-            padding: 16px 20px;
-            margin-top: 12px;
-        }
-
-        .highlight p {
-            color: #4aaa80 !important;
-            font-size: 14px !important;
-            margin: 0 !important;
-        }
-
-        /* Contact */
-        .contact-card {
-            background: #0a0e1c;
-            border: 1px solid #1a2440;
-            border-radius: 18px;
-            padding: 28px 32px;
-            margin-bottom: 20px;
-            display: flex;
-            align-items: center;
-            gap: 20px;
-        }
-
-        .contact-avatar {
-            font-size: 36px;
-            flex-shrink: 0;
-        }
-
-        .contact-info h3 {
-            font-size: 16px;
-            font-weight: 700;
-            color: #e0eeff;
-            margin-bottom: 4px;
-        }
-
-        .contact-info p {
-            font-size: 14px;
-            color: #4a6a8a;
-            margin: 0;
-        }
-
-        .contact-info a {
-            color: #5b8fff;
-            text-decoration: none;
-        }
-
-        .contact-info a:hover {
-            text-decoration: underline;
-        }
-
-        /* Footer */
-        .footer {
-            text-align: center;
-            padding-top: 40px;
-            border-top: 1px solid #1a2440;
-            margin-top: 12px;
-        }
-
-        .footer p {
-            font-size: 13px;
-            color: #2a3a50;
-        }
-
-        /* Language toggle */
-        .lang-toggle {
-            display: flex;
-            justify-content: center;
-            gap: 8px;
-            margin-bottom: 32px;
-        }
-
-        .lang-btn {
-            padding: 6px 18px;
-            border-radius: 20px;
-            border: 1px solid #1a2e4a;
-            background: transparent;
-            color: #4a6a8a;
-            font-size: 13px;
-            cursor: pointer;
-            transition: all 0.2s;
-        }
-
-        .lang-btn.active {
-            background: #5b3bf5;
-            border-color: #5b3bf5;
-            color: #fff;
-        }
-
-        .lang-section { display: none; }
-        .lang-section.visible { display: block; }
-    </style>
+    /* ── Language tabs ─────────────────────────────────────────── */
+    .tabs {
+      display: flex;
+      gap: 6px;
+      margin: 22px 0 0;
+      padding: 6px;
+      background: rgba(255,255,255,0.04);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      flex-wrap: wrap;
+    }
+    .tab {
+      flex: 1 1 110px;
+      padding: 10px 16px;
+      background: transparent;
+      color: var(--muted);
+      border: none;
+      border-radius: 10px;
+      font-family: inherit;
+      font-size: 14px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background 200ms ease, color 200ms ease;
+    }
+    .tab:hover { color: var(--text); }
+    .tab.active {
+      background: var(--accent);
+      color: #ffffff;
+      box-shadow: 0 4px 16px rgba(110,92,255,0.35);
+    }
+    .tab-content { display: none; }
+    .tab-content.active { display: block; }
+  </style>
 </head>
 <body>
-<div class="container">
+  <div class="wrap">
 
-    <div class="header">
-        <span class="app-icon">🎙️</span>
-        <div class="app-name">VocalFX</div>
-        <div class="page-title">Privacy Policy</div>
-        <span class="updated">Last updated: March 2026</span>
-    </div>
+    <section class="hero">
+      <div class="eyebrow">VocalFX</div>
+      <h1>Privacy Policy / Polityka prywatności</h1>
+      <p class="subtitle">This document explains how VocalFX uses the microphone, voice recording files, and local settings. Dokument opisuje, w jaki sposób aplikacja VocalFX korzysta z mikrofonu, plików nagrań głosu i ustawień lokalnych.</p>
+      <div class="meta">Last updated / Data aktualizacji: 29 May 2026 • Version 2.8.0</div>
 
-    <div class="lang-toggle">
-        <button class="lang-btn active" onclick="setLang('en')">🇬🇧 English</button>
-        <button class="lang-btn" onclick="setLang('pl')">🇵🇱 Polski</button>
-    </div>
+      <!-- Language tabs (add more buttons to support new languages) -->
+      <nav class="tabs" role="tablist" aria-label="Language">
+        <button class="tab active" role="tab" data-target="tab-en" aria-selected="true">English</button>
+        <button class="tab"        role="tab" data-target="tab-pl" aria-selected="false">Polski</button>
+        <!-- To add a new language:
+             1) Add a button here with data-target="tab-XX"
+             2) Add a matching <section id="tab-XX" class="tab-content">…</section> below
+             3) No JS change needed — the switcher reads data-target automatically. -->
+      </nav>
+    </section>
 
-    <!-- ── ENGLISH ── -->
-    <div id="lang-en" class="lang-section visible">
+    <!-- ─────────────────── ENGLISH (default) ─────────────────── -->
 
-        <div class="section">
-            <h2><span class="icon">📋</span> Overview</h2>
-            <p>VocalFX ("the App") is a real-time voice effects application developed by Janusz Wierzchowski (iWelAutomatyka). This policy explains what data the App accesses, how it is used, and your rights.</p>
-            <div class="highlight">
-                <p>✓ VocalFX does not collect, store, or transmit any personal data. All audio processing happens entirely on your device.</p>
-            </div>
-        </div>
+    <section id="tab-en" class="tab-content active">
 
-        <div class="section">
-            <h2><span class="icon">🎤</span> Microphone Access</h2>
-            <p>The App requires access to your device microphone solely to apply real-time voice effects during active use. Audio data is:</p>
-            <ul>
-                <li>Processed locally on the device in real time</li>
-                <li>Never recorded or saved without explicit user action</li>
-                <li>Never transmitted to any server or third party</li>
-                <li>Discarded immediately when the processing engine stops</li>
-            </ul>
-        </div>
+      <section class="section">
+        <h2>1. Data Controller</h2>
+        <p>The data controller of the VocalFX application is:</p>
+        <ul>
+          <li><strong>ForgeLabs Systems</strong></li>
+          <li>Contact e-mail: <a href="mailto:contact@forgelabs.systems">contact@forgelabs.systems</a></li>
+        </ul>
+      </section>
 
-        <div class="section">
-            <h2><span class="icon">📦</span> Data We Collect</h2>
-            <p>VocalFX does not collect any personally identifiable information. The App stores the following data <strong>locally on your device only</strong>:</p>
-            <ul>
-                <li>Your custom preset configurations (effect parameters, names, emoji)</li>
-                <li>Your modifications to built-in presets</li>
-                <li>Onboarding completion flag</li>
-                <li>App usage counter (used solely to decide when to show the in-app review prompt)</li>
-            </ul>
-            <p>This data never leaves your device and can be deleted by uninstalling the App.</p>
-        </div>
+      <section class="section">
+        <h2>2. Scope of the Application</h2>
+        <p>VocalFX is an Android application that enables:</p>
+        <ul>
+          <li>real-time voice processing with vocal effects (live monitor)</li>
+          <li>recording voice with effects into audio files (M4A)</li>
+          <li>playback and sharing of recordings</li>
+        </ul>
+      </section>
 
-        <div class="section">
-            <h2><span class="icon">🔒</span> Third-Party Services</h2>
-            <p>The App integrates the following Google services:</p>
-            <ul>
-                <li><strong>Google Play In-App Review API</strong> — used to show a review prompt after sufficient usage. No data is shared with this service beyond what Google Play already knows about your device.</li>
-            </ul>
-            <p>No analytics, advertising, tracking, or crash reporting SDKs are included in the App.</p>
-        </div>
+      <section class="section">
+        <h2>3. What Data is Processed</h2>
+        <p>The application processes only data stored locally on the user's device:</p>
+        <ul>
+          <li><strong>microphone signal</strong> from the device's built-in microphone — requires <code>RECORD_AUDIO</code> permission</li>
+          <li><strong>audio files</strong> containing recorded voice with effects, saved exclusively on the device in the app's private directory (<code>Android/data/com.iwelautomatyka.vocalfx/files/Recordings/</code>)</li>
+          <li>local <strong>app settings</strong>: presets, DSP effect parameters, EQ, AGC, volume settings, interface language</li>
+          <li>technical information necessary for the application to function on a given device</li>
+        </ul>
+      </section>
 
-        <div class="section">
-            <h2><span class="icon">👶</span> Children's Privacy</h2>
-            <p>VocalFX does not knowingly collect any information from children under the age of 13. The App does not collect personal data from any user regardless of age.</p>
-        </div>
+      <section class="section">
+        <h2>4. How Data is Used</h2>
+        <ul>
+          <li>running audio functions (DSP — voice effects, EQ, AGC, noise reduction)</li>
+          <li>recording voice on user demand into M4A files and playing them back from the library</li>
+          <li>saving user settings and custom presets</li>
+          <li>proper functioning of the application</li>
+        </ul>
+      </section>
 
-        <div class="section">
-            <h2><span class="icon">🔄</span> Changes to This Policy</h2>
-            <p>If this privacy policy changes materially, the updated version will be published at this URL with a revised date. Continued use of the App after changes constitutes acceptance of the updated policy.</p>
-        </div>
+      <section class="section">
+        <h2>5. Is Data Sent Outside the Device</h2>
+        <p><strong>No.</strong> The application does not send microphone signal or audio files to any external servers, clouds, or analytics services.</p>
+        <p>The application does not contain:</p>
+        <ul>
+          <li>user login or account layer</li>
+          <li>cloud synchronization</li>
+          <li>remote upload panel for recordings</li>
+          <li>audio analytics (audio telemetry)</li>
+          <li>ads collecting voice data</li>
+        </ul>
+      </section>
 
-        <div class="contact-card">
-            <div class="contact-avatar">👤</div>
-            <div class="contact-info">
-                <h3>Janusz Wierzchowski — iWelAutomatyka</h3>
-                <p>Questions about this policy? Contact us at:</p>
-                <p><a href="mailto:iwelautomatyka@gmail.com">iwelautomatyka@gmail.com</a></p>
-            </div>
-        </div>
+      <section class="section">
+        <h2>6. Sharing Recordings by the User</h2>
+        <p>The application provides an option to <strong>share recordings</strong> through Android's system mechanism (<code>Intent.ACTION_SEND</code>). Sharing occurs <strong>only on the user's explicit request</strong> through the "Share" button in the Library tab.</p>
+        <p>After pressing Share, the user independently selects the target application (e.g. WhatsApp, Discord, Telegram, Gmail, Google Drive). VocalFX does not select or control which application the recording will be passed to.</p>
+        <p>After passing the file to another application, the privacy policy of that other application applies.</p>
+      </section>
 
-    </div><!-- /lang-en -->
+      <section class="section">
+        <h2>7. Storing Data on the Device</h2>
+        <ul>
+          <li>Audio files and settings are stored <strong>only locally</strong> in the app's private directory.</li>
+          <li>This directory is accessible only to the VocalFX application — other applications do not have access to it (Android Scoped Storage).</li>
+          <li>After <strong>uninstalling the application</strong>, all audio files and settings are <strong>automatically removed</strong> by the Android system.</li>
+        </ul>
+      </section>
 
-    <!-- ── POLSKI ── -->
-    <div id="lang-pl" class="lang-section">
+      <section class="section">
+        <h2>8. Automatic Deletion of Recordings</h2>
+        <p>To protect device storage, the application uses a <strong>100 MB</strong> limit on recordings:</p>
+        <ul>
+          <li>when the total size of recordings exceeds 100 MB, the oldest files are automatically deleted (FIFO) until 80 MB level is reached</li>
+          <li>automatic deletion occurs before starting a new recording</li>
+          <li>the user can at any time manually delete any recording from the Library tab</li>
+        </ul>
+      </section>
 
-        <div class="section">
-            <h2><span class="icon">📋</span> Wprowadzenie</h2>
-            <p>VocalFX ("Aplikacja") to aplikacja do efektów głosowych w czasie rzeczywistym, stworzona przez Janusza Wierzchowskiego (iWelAutomatyka). Niniejsza polityka opisuje, do jakich danych Aplikacja ma dostęp, jak są one wykorzystywane oraz jakie masz prawa.</p>
-            <div class="highlight">
-                <p>✓ VocalFX nie zbiera, nie przechowuje ani nie przesyła żadnych danych osobowych. Całe przetwarzanie audio odbywa się wyłącznie na Twoim urządzeniu.</p>
-            </div>
-        </div>
+      <section class="section">
+        <h2>9. Application Permissions</h2>
+        <p>The application uses the following permission:</p>
+        <ul>
+          <li><strong>microphone</strong> (<code>RECORD_AUDIO</code>) — necessary for audio functions and voice recording</li>
+        </ul>
+        <p>The application <strong>does not require</strong> permissions:</p>
+        <ul>
+          <li><code>WRITE_EXTERNAL_STORAGE</code> (storage takes place in the app's private directory)</li>
+          <li><code>INTERNET</code> or other network-related permissions</li>
+          <li>access to contacts, location, calendar</li>
+          <li>access to other user files</li>
+        </ul>
+        <p>Lack of microphone consent limits or makes audio functions unusable.</p>
+      </section>
 
-        <div class="section">
-            <h2><span class="icon">🎤</span> Dostęp do mikrofonu</h2>
-            <p>Aplikacja wymaga dostępu do mikrofonu urządzenia wyłącznie w celu stosowania efektów głosowych w czasie rzeczywistym podczas aktywnego użytkowania. Dane audio są:</p>
-            <ul>
-                <li>Przetwarzane lokalnie na urządzeniu w czasie rzeczywistym</li>
-                <li>Nigdy nie nagrywane ani zapisywane bez wyraźnej akcji użytkownika</li>
-                <li>Nigdy nie przesyłane na żaden serwer ani do osób trzecich</li>
-                <li>Natychmiast odrzucane po zatrzymaniu silnika przetwarzania</li>
-            </ul>
-        </div>
+      <section class="section">
+        <h2>10. Hardware Requirements</h2>
+        <ul>
+          <li>microphone (<code>android.hardware.microphone</code>)</li>
+          <li>audio output (<code>android.hardware.audio.output</code>)</li>
+        </ul>
+      </section>
 
-        <div class="section">
-            <h2><span class="icon">📦</span> Zbierane dane</h2>
-            <p>VocalFX nie zbiera żadnych danych osobowych. Aplikacja przechowuje następujące dane <strong>wyłącznie lokalnie na Twoim urządzeniu</strong>:</p>
-            <ul>
-                <li>Twoje własne konfiguracje presetów (parametry efektów, nazwy, emoji)</li>
-                <li>Twoje modyfikacje wbudowanych presetów</li>
-                <li>Flaga ukończenia onboardingu</li>
-                <li>Licznik użytkowania (służy wyłącznie do ustalenia momentu wyświetlenia prośby o ocenę)</li>
-            </ul>
-            <p>Te dane nigdy nie opuszczają Twojego urządzenia i można je usunąć odinstalowując Aplikację.</p>
-        </div>
+      <section class="section">
+        <h2>11. User Rights</h2>
+        <ul>
+          <li>obtain information about data processing</li>
+          <li>correct data</li>
+          <li>restrict processing</li>
+          <li>delete data processed locally by: deleting individual recordings in the Library tab, clearing application data through Android system settings, or uninstalling the application</li>
+          <li>contact the administrator regarding data protection matters</li>
+        </ul>
+      </section>
 
-        <div class="section">
-            <h2><span class="icon">🔒</span> Usługi zewnętrzne</h2>
-            <p>Aplikacja korzysta z następujących usług Google:</p>
-            <ul>
-                <li><strong>Google Play In-App Review API</strong> — służy do wyświetlenia prośby o ocenę po odpowiednim czasie użytkowania. Żadne dane nie są udostępniane tej usłudze poza tym, co Google Play już wie o Twoim urządzeniu.</li>
-            </ul>
-            <p>Aplikacja nie zawiera żadnych SDK do analityki, reklam, śledzenia ani raportowania błędów.</p>
-        </div>
+      <section class="section">
+        <h2>12. Children and Minors</h2>
+        <p>The application is not dedicated to children under 13 years old. If the application is used by a minor, responsibility for compliance with local legal requirements lies with the adult (parent, guardian).</p>
+      </section>
 
-        <div class="section">
-            <h2><span class="icon">👶</span> Ochrona prywatności dzieci</h2>
-            <p>VocalFX nie zbiera świadomie żadnych informacji od dzieci poniżej 13 roku życia. Aplikacja nie zbiera danych osobowych od żadnego użytkownika, niezależnie od wieku.</p>
-        </div>
+      <section class="section">
+        <h2>13. Changes to the Privacy Policy</h2>
+        <p>This privacy policy may be updated together with the development of the application. The current version is always available at the privacy policy URL linked from the Google Play listing.</p>
+      </section>
 
-        <div class="section">
-            <h2><span class="icon">🔄</span> Zmiany polityki prywatności</h2>
-            <p>Jeśli niniejsza polityka prywatności ulegnie istotnym zmianom, zaktualizowana wersja zostanie opublikowana pod tym adresem URL z poprawioną datą. Dalsze korzystanie z Aplikacji po wprowadzeniu zmian oznacza akceptację zaktualizowanej polityki.</p>
-        </div>
+      <section class="section">
+        <h2>14. Contact</h2>
+        <p>For privacy-related matters: <a href="mailto:contact@forgelabs.systems">contact@forgelabs.systems</a></p>
+      </section>
 
-        <div class="contact-card">
-            <div class="contact-avatar">👤</div>
-            <div class="contact-info">
-                <h3>Janusz Wierzchowski — iWelAutomatyka</h3>
-                <p>Pytania dotyczące tej polityki? Skontaktuj się z nami:</p>
-                <p><a href="mailto:iwelautomatyka@gmail.com">iwelautomatyka@gmail.com</a></p>
-            </div>
-        </div>
+    </section><!-- /tab-en -->
 
-    </div><!-- /lang-pl -->
+    <!-- ─────────────────── POLSKI ─────────────────── -->
+
+    <section id="tab-pl" class="tab-content">
+
+      <section class="section">
+        <h2>1. Administrator</h2>
+        <p>Administratorem aplikacji VocalFX oraz danych przetwarzanych w związku z jej działaniem jest:</p>
+        <ul>
+          <li><strong>ForgeLabs Systems</strong></li>
+          <li>Kontakt e-mail: <a href="mailto:contact@forgelabs.systems">contact@forgelabs.systems</a></li>
+        </ul>
+      </section>
+
+      <section class="section">
+        <h2>2. Zakres aplikacji</h2>
+        <p>VocalFX to aplikacja na Androida umożliwiająca:</p>
+        <ul>
+          <li>przetwarzanie głosu w czasie rzeczywistym z efektami wokalnymi (live monitor)</li>
+          <li>nagrywanie głosu z efektami do plików audio (M4A)</li>
+          <li>odsłuchiwanie i udostępnianie nagrań</li>
+        </ul>
+      </section>
+
+      <section class="section">
+        <h2>3. Jakie dane są przetwarzane</h2>
+        <p>Aplikacja przetwarza wyłącznie dane przechowywane lokalnie na urządzeniu użytkownika:</p>
+        <ul>
+          <li><strong>sygnał z mikrofonu</strong> wbudowanego w urządzenie — wymaga zgody na uprawnienie <code>RECORD_AUDIO</code></li>
+          <li><strong>pliki audio</strong> zawierające nagrany głos z efektami, zapisywane wyłącznie na urządzeniu w prywatnym katalogu aplikacji (<code>Android/data/com.iwelautomatyka.vocalfx/files/Recordings/</code>)</li>
+          <li>lokalne <strong>ustawienia aplikacji</strong>: presety, parametry efektów DSP, EQ, AGC, głośność, język</li>
+          <li>informacje techniczne niezbędne do działania aplikacji</li>
+        </ul>
+      </section>
+
+      <section class="section">
+        <h2>4. W jaki sposób dane są wykorzystywane</h2>
+        <ul>
+          <li>uruchomienia funkcji audio (DSP — efekty głosowe, EQ, AGC, redukcja szumów)</li>
+          <li>nagrywania głosu na żądanie użytkownika do plików M4A i odtwarzania ich z biblioteki</li>
+          <li>zapisu ustawień użytkownika i niestandardowych presetów</li>
+          <li>prawidłowego działania aplikacji</li>
+        </ul>
+      </section>
+
+      <section class="section">
+        <h2>5. Czy dane są wysyłane poza urządzenie</h2>
+        <p><strong>Nie.</strong> Aplikacja nie wysyła sygnału z mikrofonu ani plików audio do żadnych zewnętrznych serwerów, chmur ani usług analitycznych.</p>
+        <p>Aplikacja nie zawiera:</p>
+        <ul>
+          <li>warstwy logowania ani kont użytkownika</li>
+          <li>synchronizacji z chmurą</li>
+          <li>panelu zdalnego przesyłania nagrań</li>
+          <li>analityki audio (telemetrii dźwiękowej)</li>
+          <li>reklam zbierających dane głosowe</li>
+        </ul>
+      </section>
+
+      <section class="section">
+        <h2>6. Udostępnianie nagrań przez użytkownika</h2>
+        <p>Aplikacja udostępnia opcję <strong>udostępnienia nagrań</strong> poprzez systemowy mechanizm Android (<code>Intent.ACTION_SEND</code>). Udostępnienie zachodzi <strong>wyłącznie na żądanie użytkownika</strong> poprzez przycisk "Share" w zakładce Library.</p>
+        <p>Po naciśnięciu przycisku Share, użytkownik samodzielnie wybiera aplikację docelową (np. WhatsApp, Discord, Telegram, Gmail, Google Drive). VocalFX nie wybiera ani nie kontroluje, do której aplikacji nagranie zostanie przekazane.</p>
+        <p>Po przekazaniu pliku do innej aplikacji obowiązują zasady prywatności tej innej aplikacji.</p>
+      </section>
+
+      <section class="section">
+        <h2>7. Przechowywanie danych na urządzeniu</h2>
+        <ul>
+          <li>Pliki audio i ustawienia są przechowywane <strong>wyłącznie lokalnie</strong> w katalogu prywatnym aplikacji.</li>
+          <li>Katalog ten jest dostępny tylko dla aplikacji VocalFX — inne aplikacje nie mają do niego dostępu (zgodnie z zasadami Android Scoped Storage).</li>
+          <li>Po <strong>odinstalowaniu aplikacji</strong> wszystkie pliki audio i ustawienia są <strong>automatycznie usuwane</strong> przez system Android.</li>
+        </ul>
+      </section>
+
+      <section class="section">
+        <h2>8. Automatyczne usuwanie nagrań</h2>
+        <p>W celu ochrony pamięci urządzenia aplikacja stosuje limit <strong>100 MB</strong> na nagrania:</p>
+        <ul>
+          <li>gdy łączny rozmiar nagrań przekroczy 100 MB, najstarsze pliki są automatycznie usuwane (FIFO) do osiągnięcia 80 MB</li>
+          <li>automatyczne usuwanie zachodzi przed rozpoczęciem nowego nagrania</li>
+          <li>użytkownik może w każdej chwili ręcznie usunąć dowolne nagranie z zakładki Library</li>
+        </ul>
+      </section>
+
+      <section class="section">
+        <h2>9. Uprawnienia aplikacji</h2>
+        <p>Aplikacja korzysta z jednego uprawnienia:</p>
+        <ul>
+          <li><strong>mikrofon</strong> (<code>RECORD_AUDIO</code>) — niezbędny do obsługi funkcji audio i nagrywania głosu</li>
+        </ul>
+        <p>Aplikacja <strong>nie wymaga</strong> uprawnień:</p>
+        <ul>
+          <li><code>WRITE_EXTERNAL_STORAGE</code> (zapis odbywa się w prywatnym katalogu aplikacji)</li>
+          <li><code>INTERNET</code> ani innych dotyczących sieci</li>
+          <li>dostępu do kontaktów, lokalizacji, kalendarza</li>
+          <li>dostępu do innych plików użytkownika</li>
+        </ul>
+        <p>Brak zgody na mikrofon ogranicza lub uniemożliwia korzystanie z funkcji audio.</p>
+      </section>
+
+      <section class="section">
+        <h2>10. Wymagania sprzętowe</h2>
+        <ul>
+          <li>mikrofon (<code>android.hardware.microphone</code>)</li>
+          <li>wyjście audio (<code>android.hardware.audio.output</code>)</li>
+        </ul>
+      </section>
+
+      <section class="section">
+        <h2>11. Prawa użytkownika</h2>
+        <ul>
+          <li>uzyskanie informacji o przetwarzaniu danych</li>
+          <li>sprostowanie danych</li>
+          <li>ograniczenie przetwarzania</li>
+          <li>usunięcie danych przetwarzanych lokalnie poprzez: usunięcie pojedynczych nagrań w zakładce Library, wyczyszczenie danych aplikacji przez Ustawienia systemu Android, lub odinstalowanie aplikacji</li>
+          <li>kontaktu z administratorem w sprawach ochrony danych</li>
+        </ul>
+      </section>
+
+      <section class="section">
+        <h2>12. Dzieci i osoby małoletnie</h2>
+        <p>Aplikacja nie jest dedykowana dzieciom poniżej 13 roku życia. Jeśli aplikacja jest wykorzystywana przez osobę małoletnią, odpowiedzialność za zgodność korzystania z aplikacji z lokalnymi wymogami prawnymi spoczywa na osobie dorosłej (rodzicu, opiekunie).</p>
+      </section>
+
+      <section class="section">
+        <h2>13. Zmiany polityki prywatności</h2>
+        <p>Polityka może być aktualizowana wraz z rozwojem aplikacji. Aktualna wersja zawsze dostępna pod adresem URL polityki, do którego prowadzi link w aplikacji Google Play.</p>
+      </section>
+
+      <section class="section">
+        <h2>14. Kontakt</h2>
+        <p>W sprawach dotyczących prywatności: <a href="mailto:contact@forgelabs.systems">contact@forgelabs.systems</a></p>
+      </section>
+
+    </section><!-- /tab-pl -->
 
     <div class="footer">
-        <p>© 2026 Janusz Wierzchowski — iWelAutomatyka · VocalFX</p>
+      VocalFX • 2.8.0 • ForgeLabs Systems • <a href="mailto:contact@forgelabs.systems">contact@forgelabs.systems</a>
     </div>
 
-</div>
+  </div>
 
-<script>
-    function setLang(lang) {
-        document.querySelectorAll('.lang-section').forEach(el => el.classList.remove('visible'));
-        document.querySelectorAll('.lang-btn').forEach(el => el.classList.remove('active'));
-        document.getElementById('lang-' + lang).classList.add('visible');
-        event.target.classList.add('active');
-    }
-</script>
-
+  <script>
+    // Tab switcher — data-target attribute on a .tab button points to the
+    // matching .tab-content section's id. No framework needed; adding a new
+    // language is just one new button + one new section.
+    (function () {
+      const tabs = document.querySelectorAll('.tab');
+      const contents = document.querySelectorAll('.tab-content');
+      tabs.forEach(btn => {
+        btn.addEventListener('click', () => {
+          const targetId = btn.dataset.target;
+          tabs.forEach(t => {
+            const active = t === btn;
+            t.classList.toggle('active', active);
+            t.setAttribute('aria-selected', active ? 'true' : 'false');
+          });
+          contents.forEach(c => {
+            c.classList.toggle('active', c.id === targetId);
+          });
+          // Update <html lang="..."> so screen readers pick the right voice.
+          // tab-en → en, tab-pl → pl, etc.
+          const lang = targetId.replace(/^tab-/, '');
+          if (lang) document.documentElement.setAttribute('lang', lang);
+          // Scroll back to top of content area
+          window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+      });
+    })();
+  </script>
 </body>
 </html>
